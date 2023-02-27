@@ -6,15 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSync } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import "./App.css";
-import Fondo1 from "../src/assets/Fondo1.jpg";
-import Fondo2 from "../src/assets/Fondo2.jpg";
-import Fondo3 from "../src/assets/Fondo3.jpg";
-import Fondo4 from "../src/assets/Fondo4.jpg";
-import Fondo5 from "../src/assets/Fondo5.jpg";
-import Fondo6 from "../src/assets/Fondo6.jpg";
-import Fondo7 from "../src/assets/Fondo7.jpg";
 
-const backgrounds = [Fondo1, Fondo2, Fondo3, Fondo4, Fondo5, Fondo6, Fondo7];
+const backgrounds = [
+  "https://i.ibb.co/PDSzK4N/Fondo1.jpg",
+  "https://i.ibb.co/8mCSjSf/Fondo2.jpg",
+  "https://i.ibb.co/YZp78jb/Fondo3.jpg",
+  "https://i.ibb.co/HBSbVxQ/Fondo4.jpg",
+  "https://i.ibb.co/yy8qhRW/Fondo5.jpg",
+  "https://i.ibb.co/qncWQ4V/Fondo6.jpg",
+  "https://i.ibb.co/0D97Z6x/Fondo7.jpg",
+];
 
 function App() {
   const randomIndex = Math.floor(Math.random() * info.length);
