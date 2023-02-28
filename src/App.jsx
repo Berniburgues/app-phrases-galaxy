@@ -18,29 +18,32 @@ const backgrounds = [
 ];
 
 function App() {
-  const [index, setIndex] = useState(Math.floor(Math.random() * info.length))
+  const [index, setIndex] = useState(Math.floor(Math.random() * info.length));
+  const [backgroundIndex, setBackgroundIndex] = useState(
+    Math.floor(Math.random() * backgrounds.length)
+  );
   const [phrase, setPhrase] = useState(info[index].phrase);
   const [author, setAuthor] = useState(info[index].author);
+  const background = backgrounds[backgroundIndex];
 
   function generator() {
     let newIndex = index;
+    let newBackgroundIndex = backgroundIndex;
     while (newIndex === index) {
       newIndex = Math.floor(Math.random() * info.length);
     }
+    while (newBackgroundIndex === backgroundIndex) {
+      newBackgroundIndex = Math.floor(Math.random() * backgrounds.length);
+    }
     setIndex(newIndex);
+    setBackgroundIndex(newBackgroundIndex);
     const randomInfo = info[newIndex];
     setAuthor(randomInfo.author);
     setPhrase(randomInfo.phrase);
   }
 
-  const randomBackground =
-    backgrounds[Math.floor(Math.random() * backgrounds.length)];
-
   return (
-    <div
-      className="App"
-      style={{ backgroundImage: `url(${randomBackground})` }}
-    >
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <div className="container">
         <h1>Info Galaxy</h1>
         <Phrase phrase={phrase} />
