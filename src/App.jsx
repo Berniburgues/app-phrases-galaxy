@@ -18,13 +18,17 @@ const backgrounds = [
 ];
 
 function App() {
-  const randomIndex = Math.floor(Math.random() * info.length);
-  const [phrase, setPhrase] = useState(info[randomIndex].phrase);
-  const [author, setAuthor] = useState(info[randomIndex].author);
+  const [index, setIndex] = useState(Math.floor(Math.random() * info.length))
+  const [phrase, setPhrase] = useState(info[index].phrase);
+  const [author, setAuthor] = useState(info[index].author);
 
   function generator() {
-    const randomIndex = Math.floor(Math.random() * info.length);
-    const randomInfo = info[randomIndex];
+    let newIndex = index;
+    while (newIndex === index) {
+      newIndex = Math.floor(Math.random() * info.length);
+    }
+    setIndex(newIndex);
+    const randomInfo = info[newIndex];
     setAuthor(randomInfo.author);
     setPhrase(randomInfo.phrase);
   }
