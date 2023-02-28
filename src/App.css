@@ -25,11 +25,11 @@ body {
   text-align: center;
 }
 h1 {
+  font-size: 60px;
   padding: 15px;
   position: relative;
   bottom: 35px;
-  font-family: 'Press Start 2P', cursive;
-  background-image: linear-gradient(to bottom, rgba(70, 48, 237, 0.5) 0%, rgba(255,255,255, 0) 100%);
+  font-family: "Press Start 2P", cursive;
   border-radius: 30px;
   text-shadow: 2px 5px 15px blueviolet;
   animation: fadeAndScale 2s ease-out;
@@ -79,7 +79,7 @@ h1 {
 }
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 35px;
+    font-size: 40px;
     margin: 10px;
     bottom: 150px;
   }
